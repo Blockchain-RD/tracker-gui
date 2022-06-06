@@ -1,11 +1,12 @@
 export interface ITransaction {
     Id: string,
-    Date: Date,
+    Date: string,
     Coin: string,
     Value: number
 }
 
-function getCoolDate(date: Date): string {   
+function getCoolDate(d: string): string {   
+    const date = new Date(d)
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
 }
 
