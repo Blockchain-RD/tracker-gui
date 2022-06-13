@@ -12,9 +12,11 @@ function getCoolDate(d: string): string {
 
 function Transaction(transaction: ITransaction) {
     return (
-        <div className="transaction">
-            <span>{transaction.Coin}</span> - <span>{transaction.Value}</span> - <span>{getCoolDate(transaction.Date)}</span> 
-        </div>
+        <tr className="transaction">
+            <td>{transaction.Coin}</td> 
+            <td>{transaction.Value}</td>
+            <td>{getCoolDate(transaction.Date)}</td> 
+        </tr>
     )
 }
 

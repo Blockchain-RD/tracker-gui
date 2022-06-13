@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import transactionContext from "../context/transactions"
 import { getAllTransaction } from "../helpers/transactions"
 import Transaction, { ITransaction } from "./transaction"
+
+import './styles.scss'
 
 export interface ITransactionList {
     [id: string]: ITransaction
 }
 
 function Visor() {
-    let [transactions, setTransations] = useState<ITransactionList>({}) 
+    const [ transactions, setTransations ] = useContext(transactionContext)
     
     useEffect(() => {
         getAllTransaction()
@@ -17,7 +20,7 @@ function Visor() {
     }, [])
 
     return (
-        <div className="visor">
+        <table className="visor">
         {
             Object.keys(transactions).map(
                 id => (
@@ -25,7 +28,7 @@ function Visor() {
                 )
             )   
         }
-        </div>
+        </table>
     )
 }
 

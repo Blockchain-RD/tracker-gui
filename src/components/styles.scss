@@ -1,0 +1,40 @@
+.transaction-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &--input{
+        border: 1px solid lightgrey;
+        padding: 5px;
+        font-size: 1.2em;
+        border-radius: 3px;
+        margin-right: 3px;
+    }
+
+    &--button{
+        background-color: green;
+        color: white;
+        border: 1px solid gray;
+
+        font-size: 1.2em;
+        transition: 0.3s;
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+        border-radius: 3px;
+
+        &:hover{
+            cursor: pointer;
+            border: 1px solid green;
+            color: green;
+            background-color: white;
+        }
+    }
+}
+
+
+.visor {
+
+    .transaction {
+        
+    }
+}
